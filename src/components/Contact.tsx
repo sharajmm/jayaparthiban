@@ -94,7 +94,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/jayaparthiban",
+      url: "https://www.linkedin.com/in/jaya-parthiban-a9a95b284/",
       color: "hover:text-blue-600",
     },
     {
