@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System for Jayaparthiban - UI/UX & Graphic Designer
+Luxury theme with rich golds, deep purples, and sophisticated elegance
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Luxury base colors */
+    --background: 300 5% 5%;
+    --foreground: 45 95% 90%;
+    
+    /* Surface colors */
+    --card: 300 8% 8%;
+    --card-foreground: 45 95% 90%;
+    
+    --popover: 300 8% 8%;
+    --popover-foreground: 45 95% 90%;
+    
+    /* Brand colors - Rich Gold primary */
+    --primary: 45 95% 65%;
+    --primary-foreground: 300 8% 8%;
+    --primary-glow: 45 100% 75%;
+    
+    /* Purple luxury accent */
+    --coral: 270 75% 65%;
+    --coral-foreground: 0 0% 100%;
+    --coral-light: 270 85% 75%;
+    
+    /* Secondary luxury neutrals */
+    --secondary: 300 15% 15%;
+    --secondary-foreground: 45 95% 85%;
+    
+    --muted: 300 10% 12%;
+    --muted-foreground: 45 30% 70%;
+    
+    --accent: 45 85% 20%;
+    --accent-foreground: 45 95% 85%;
+    
+    /* System colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 300 15% 20%;
+    --input: 300 15% 15%;
+    --ring: 45 95% 65%;
+    
+    /* Luxury gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--coral-light)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--coral)) 0%, hsl(var(--primary)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-luxury: linear-gradient(135deg, hsl(45 95% 65% / 0.1) 0%, hsl(270 75% 65% / 0.1) 100%);
+    
+    /* Luxury shadows with gold/purple glow */
+    --shadow-primary: 0 20px 60px -10px hsl(var(--primary) / 0.4);
+    --shadow-coral: 0 20px 60px -10px hsl(var(--coral) / 0.3);
+    --shadow-elegant: 0 8px 32px -8px hsl(45 95% 65% / 0.15);
+    --shadow-luxury: 0 25px 80px -15px hsl(270 75% 65% / 0.25);
+    
+    /* Smooth luxury transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Premium light luxury theme */
+    --background: 45 50% 97%;
+    --foreground: 300 15% 15%;
+
+    --card: 45 30% 95%;
+    --card-foreground: 300 15% 15%;
+
+    --popover: 45 30% 95%;
+    --popover-foreground: 300 15% 15%;
+
+    --primary: 45 85% 55%;
+    --primary-foreground: 300 15% 15%;
+
+    --secondary: 45 20% 90%;
+    --secondary-foreground: 300 15% 25%;
+
+    --muted: 45 15% 88%;
+    --muted-foreground: 300 15% 45%;
+
+    --accent: 270 60% 92%;
+    --accent-foreground: 270 75% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 85%;
+    --input: 45 20% 85%;
+    --ring: 45 85% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+@layer components {
+  /* Typography utilities */
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Gradient utilities */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  /* Shadow utilities */
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+  
+  .shadow-coral {
+    box-shadow: var(--shadow-coral);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  /* Luxury gradient utility */
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  /* Transition utilities */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* Interactive effects */
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-2 hover:shadow-luxury;
+  }
+  
+  .hover-glow {
+    @apply transition-smooth hover:shadow-primary;
+  }
+  
+  .luxury-card {
+    @apply bg-card border border-border/50 backdrop-blur-sm hover-lift;
+  }
+  
+  .luxury-text {
+    @apply bg-gradient-to-r from-primary to-coral bg-clip-text text-transparent;
+  }
+}
